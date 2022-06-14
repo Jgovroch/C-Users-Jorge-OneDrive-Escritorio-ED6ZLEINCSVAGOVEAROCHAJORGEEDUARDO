@@ -57,9 +57,9 @@ int main(){
 	Nodo *lista = NULL;
 	
 	//variables
-	int opc = 1, c +, i=0, valores;
+	int opc = 1, c, i=0, valores;
 	
-	cout<<"Trabajando con listas(simples, doblemente enlazadas")<<endl;
+	cout<<"Trabajando con listas(simples, doblemente enlazadas)"<<endl;
 	while(op!=3){
 		cout<<"Ejemplo de lista simple: "<<endl;
 		cout<<"1.- Insertar un nuevo valor "<<endl;
@@ -84,7 +84,10 @@ int main(){
 		     break;
 		default:
 			cout<<"Gracias por mimir aqui uwu";
+			
+			
 }  return 0;
+
 
 void insertarLista(Nodo *&lista, int c){
 	//crear una nueva lista
@@ -111,5 +114,18 @@ void insertarLista(Nodo *&lista, int c){
 	cout<<"Elemento "<<c<<" insertado"endl;
 }
 
+int mostrarLista(void){
+	if(cab!=NULL){
+		for(aux = cab; aux!=NULL; aux=aux->sgte){
+			cout <<aux->n<<"->";
+		}
+	}
+	getch();
+	
+	else{
+		cout <<"La lista esta vacia";
+		getch();
+	}
+}
 
 

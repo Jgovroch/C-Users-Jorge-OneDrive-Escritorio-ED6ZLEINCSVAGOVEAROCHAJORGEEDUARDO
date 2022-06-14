@@ -35,8 +35,8 @@ void insertar(void);
 void mostrar(void);
 void borrar(void);
 void menu(void);
-//void guardar(void);
-//void cargar(void);
+void guardar(void);
+void cargar(void);
 
 //principal
 main(){
@@ -81,6 +81,7 @@ void menu(void){
 			    break;
 	        case 3:
 		    //mostrar
+		    cin>> mostrar;
 		    mostrar();
 		    break;
 		
@@ -91,13 +92,24 @@ void menu(void){
 		    break;
 		
 	        case 5:
-	    	//guardar
-	    	//guardar();
+	    	void guardardatos(){
+	    		printf("Guardando la info");
+	    		FILE * archivo = fopen("datos");
+	    		if(archivo== NULL){
+	    			printf("error");
+	    			return;
+				}
+			}
+	    	guardar();
 		    break;
 		
         	case 6:
-		    //cargar
-	        //cargar();
+		    FILE * archivo = fopen("datos");
+		    if(archivo == NULL){
+		    	printf("error");
+		    	return;
+			}
+	        cargar();
 		    break;
 	
 	        case 7:
@@ -171,6 +183,74 @@ void menu(void){
 			}
 			
 			return (p->i == d?1:0);
+			
+			 insertar(int da){
+
+  //saber si esta vacía 
+  if(! i){
+    //es la primera vez que se mete un dato
+    i = new (dato);
+    i->s = NULL;
+    I ->I = dat;
+    return;
+  }
+  if(buscar(dat)){
+    
+  }
+  /*
+Supongamos que tenemos lo siguiente 
+
+    nodo1= - 3, nodo2=0, nodo3=5
+
+    insertar 3
+   */
+
+e = new (dato);
+
+e->I = dat;
+
+if(p==I & & p->s){
+  // primero hago la comparación 
+  if(p->I < e->i){
+    //final
+    p->a = e;
+    e->s = NULL;
+  }else{
+    e->s = p;
+    i=e;
+  }
+  return;
+}
+if(p->s){
+  a-> a = e;
+  e-> s = p;
+  return;
+}
+if(e->I > p->i){
+  e->s = NULL;
+  p->s = e;
+}else{
+  a->s = e;
+  e->s = p;
+}
+}
+
+void borrar(void){
+  cout<<"\n Ingresa el dato que requieres borrar"
+cin>>da;
+if(buscar(da)){
+  if(a){
+    a->a =p->s;
+  }else{
+    i=p->s;
+  }
+  delete(p);
+  cout<<"\n Dato eliminado";
+}else{
+  cout<<"\n Dato no encontrado";
+  getch();
+}
+}
 }
 
 /*
